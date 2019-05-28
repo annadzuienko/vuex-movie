@@ -1,15 +1,18 @@
 import Vue from 'vue'
 import App from './App.vue'
-import Vuex from 'vuex';
 import 'es6-promise/auto';
 import router from "./router";
 import axios from "axios";
+import store from "./store";
+import Vuetify from 'vuetify';
+import 'vuetify/dist/vuetify.min.css';
 
-Vue.use(Vuex);
+Vue.config.productionTip = false;
 
-Vue.config.productionTip = false
+Vue.use(Vuetify)
 
 new Vue({
   router,
+  store,
   render: h => h(App),
 }).$mount('#app')
